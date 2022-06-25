@@ -1,56 +1,41 @@
+/* GLOBAL VARIABLES - COLOR DEFINITION */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+*{font-family: 'Be Vietnam Pro', sans-serif;}
+
+:root {
+    --rojoBrillante: rgb(242, 95, 58);
+    --azulOscuro: rgb(35, 44, 81);
+    --azulGrisáceoOscuro: rgb(143, 148, 167);
+    --azulMuyOscuro: rgb(29, 30, 37);
+    --rojoMuyPálido: rgb(255, 239, 234);
+    --varianteGrisClaro: rgb(249, 249, 249);
+}
+
+/* HEADER */
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0px;
 }
 
+body{ /* REVISAR FONDO */
+    background-image: url("../img/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    z-index: 999;
+}
 
 header {
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-}
+   /* background-color: white;*/
+    padding: 0vw 5vw;
+    position: sticky;
+    top: 0px;
+    width: 100vw;
+    height: 4vh;
 
-.nav-toggle {
-    position: absolute !important;
-    top: -99px !important;
-    left: -99px !important;
-}
-
-
-.nav-toggle-label {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 1em;
-    height: 100%;
-    display: flex;
-    background-image: url("../img/icon-hamburger.svg");
-    align-items: center;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-    display: block;
-    height: 2px;
-    width: 2em;
-    border-radius: 2px;
-    position: relative;
-}
-/*
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-    content: '';
-    position: absolute;
-}*/
-
-.nav-toggle-label span::before {
-    bottom: 7px;
-}
-
-.nav-toggle-label span::after {
-    top: 7px;
 }
 
 nav {
@@ -59,7 +44,7 @@ nav {
     top: 100%;
 
 
-    width: 100%;
+    width: 95vw;
     transform: scale(1, 0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
@@ -78,12 +63,61 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #242D52;
+    color: var(--azulOscuro)
 }
 
 nav a:hover {
-    color: #000;
+    color: var(--azulGrisáceoOscuro)
 }
+
+header button{
+    display: none;
+}
+
+/* HAMBURGER MENU */
+
+.nav-toggle {
+    position: relative;
+    top: -99px ;
+    left: -99px ;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 0.5em;
+    height: 100%;
+    display: flex;
+    background-image: url("../img/icon-hamburger.svg");
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+/*
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}*/
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
 
 .nav-toggle:checked~nav {
     transform: scale(1, 1);
@@ -94,15 +128,30 @@ nav a:hover {
     transition: opacity 250ms ease-in-out 250ms;
 }
 
-button {
-    display: none;
+/* END HAMBURGER MENU*/
+
+article img{
+    width: 100vw;
 }
+
+footer{
+    background-color: var(--azulOscuro);
+    color: white;
+}
+
+footer ul {
+    list-style: none;
+}
+/* no funciona*/
+footer a:link{
+    color: var(--azulGrisáceoOscuro);
+}
+
+/* STYLES FOR DESKTOP */
 
 @media screen and (min-width: 1439px) {
 
-    * {
-        background-color: teal;
-    }
+    
 
     .nav-toggle-label {
         display: none;
@@ -121,7 +170,6 @@ button {
         background: none;
         top: initial;
         left: initial;
-
         grid-column: 3 / 4;
         display: flex;
         justify-content: flex-end;
