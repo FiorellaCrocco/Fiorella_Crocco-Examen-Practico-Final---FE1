@@ -1,8 +1,6 @@
 /* GLOBAL VARIABLES - COLOR DEFINITION */
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
 
-*{font-family: 'Be Vietnam Pro', sans-serif;}
-
 :root {
     --rojoBrillante: rgb(242, 95, 58);
     --azulOscuro: rgb(35, 44, 81);
@@ -12,38 +10,39 @@
     --varianteGrisClaro: rgb(249, 249, 249);
 }
 
-/* HEADER */
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
     margin: 0px;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
-body{ /* REVISAR FONDO */
+body {
+    /* REVISAR FONDO */
     background-image: url("../img/bg-tablet-pattern.svg");
     background-repeat: no-repeat;
     background-position: top right;
+    margin: 0rem 1rem;
     z-index: 999;
 }
 
+/* HEADER */
+
 header {
-   /* background-color: white;*/
-    padding: 0vw 5vw;
+    /* background-color: white;*/
+    /*padding: 0vw 5vw;*/
     position: sticky;
     top: 0px;
     width: 100vw;
     height: 4vh;
-
 }
 
 nav {
     position: absolute;
     text-align: right;
     top: 100%;
-
-
     width: 95vw;
     transform: scale(1, 0);
     transform-origin: top;
@@ -59,6 +58,7 @@ nav ul {
 nav li {
     margin-bottom: 1rem;
     margin-right: 1rem;
+    font-weight: 500;
 }
 
 nav a {
@@ -70,23 +70,24 @@ nav a:hover {
     color: var(--azulGrisáceoOscuro)
 }
 
+/* USO ESTO ACA PERO LUEGO NO LOGRO MOSTRARLO EN DESKTOP
 header button{
     display: none;
-}
+} */
 
 /* HAMBURGER MENU */
 
 .nav-toggle {
     position: relative;
-    top: -99px ;
-    left: -99px ;
+    top: -999px;
+    left: -99px;
 }
 
 .nav-toggle-label {
     position: absolute;
     top: 0;
     right: 0;
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
     height: 100%;
     display: flex;
     background-image: url("../img/icon-hamburger.svg");
@@ -98,17 +99,10 @@ header button{
 .nav-toggle-label span::after {
     display: block;
     height: 2px;
-    width: 2em;
+    width: 2rem;
     border-radius: 2px;
     position: relative;
 }
-
-/*
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-    content: '';
-    position: absolute;
-}*/
 
 .nav-toggle-label span::before {
     bottom: 7px;
@@ -130,59 +124,164 @@ header button{
 
 /* END HAMBURGER MENU*/
 
-article img{
-    width: 100vw;
+article img {
+    height: 50vh;
 }
 
-footer{
+section article:last-child{
+    justify-content: center;
+    margin: 0rem 2rem 0rem 1.5rem;
+}
+
+h1 {
+    color: var(--azulOscuro);
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin: 0px;
+    letter-spacing: -0.035rem;
+}
+
+.home p {
+    font-weight: 500;
+    font-size: 1.03rem;
+    margin: 1.75rem 0px;
+    line-height: 157.1%;
+    width: 23.12rem;
+}
+
+footer {
     background-color: var(--azulOscuro);
-    color: white;
+    color: var(--varianteGrisClaro);
+    padding-right: 0px;
 }
 
-footer ul {
+footer ul li {
     list-style: none;
 }
-/* no funciona*/
-footer a:link{
-    color: var(--azulGrisáceoOscuro);
+
+.menues div ul li a{
+    text-decoration: none;
+    color: var(--varianteGrisClaro);
+    font-weight: 500;
+
+}
+
+.orange {
+    background-color: var(--rojoBrillante);
+    width: 8.37rem;
+    height: 2.75rem;
+    border-radius: 3rem;
+    color: var(--varianteGrisClaro);
+    border: none;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+.orangemini {
+    background-color: var(--rojoBrillante);
+    width: 8.37rem;
+    height: 2.75rem;
+    border-radius: 1.875rem;
+    color: var(--varianteGrisClaro);
+    border: none;
+}
+
+.lastFooter{
+    background-color: var(--rojoBrillante);
+}
+
+.orangeminiWhile{
+    background-color:white;
+    color: var(--rojoBrillante);
+    width: 7.5rem;
+    height: 2.68rem;
+    border-radius: 1.875rem;
+    border: none;
+}
+
+input{
+    height: 2.68rem;
+    border-radius: 1.875rem;
+    border: none;
+    width: 20rem;
+}
+
+input:last-child{
+    width: 5rem;
 }
 
 /* STYLES FOR DESKTOP */
 
 @media screen and (min-width: 1439px) {
 
-    
-
     .nav-toggle-label {
         display: none;
     }
 
+
+    body {
+        background-image: url("/img/bg-tablet-pattern.svg");
+        background-repeat: no-repeat;
+        background-position: 62.5rem -12.5rem;
+        margin: 4.5rem 9rem 0rem 9rem;
+    }
+
+    main {
+        background-image: url("/img/bg-tablet-pattern.svg");
+        background-repeat: no-repeat;
+        background-position: -31.25rem 62.5rem;
+    }
+
     header {
-        display: grid;
-        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4.69rem;
+        align-items: center;
+    }
+    .logo{
+        margin-top: 0.5rem;
     }
 
     nav {
-        position: relative;
-        text-align: left;
-        transition: none;
+        position: relative;     
         transform: scale(1, 1);
         background: none;
         top: initial;
-        left: initial;
-        grid-column: 3 / 4;
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        justify-content: space-around;
+        align-items: flex-end;
+        margin-top: 1rem;
     }
 
     nav ul {
         display: flex;
+        list-style: none;
+        gap: 1.65rem;
+        padding: 0px;
+        margin: 0px;
+        align-items: flex-end;
     }
 
-    nav li {
-        margin-left: 3em;
-        margin-bottom: 0;
+    nav ul li a {
+        text-decoration: none;
+        color: var(--azulOscuro);
+        font-weight: 500;
+    }
+
+    .home {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .image{
+        order: 1;
+    }
+
+    h1 {
+        color: var(--azulOscuro);
+        font-weight: 700;
+        font-size: 3.62rem;
+        margin: 0px;
+        letter-spacing: -0.035rem;
     }
 
 }
