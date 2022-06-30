@@ -17,10 +17,11 @@
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
     margin: 0px;
+    padding: 0px;
 }
 
 body {
-    /* REVISAR FONDO */
+    
     background-image: url("../img/bg-tablet-pattern.svg");
     background-repeat: no-repeat;
     background-position: top right;
@@ -39,8 +40,6 @@ p{
 /* HEADER */
 
 header {
-    /* background-color: white;*/
-    /*padding: 0vw 5vw;*/
     height: 4vh;
     position: sticky;
     top: 0px;
@@ -136,47 +135,12 @@ header button{
 
 /* END HAMBURGER MENU*/
 
-article img {
-    height: 50vh;
-}
-
-section article:last-child {
-    justify-content: center;
-    margin: 0rem 2rem 0rem 1.5rem;
-}
-
 h1 {
     color: var(--azulOscuro);
     font-weight: 700;
     font-size: 3.5rem;
     letter-spacing: -0.035rem;
     margin: 0px;
-}
-
-.home p {
-    font-weight: 500;
-    font-size: 1.03rem;
-    line-height: 157.1%;
-    margin: 1.75rem 0px;
-    width: 23.12rem;
-    color: var(--azulGrisáceoOscuro);
-}
-
-footer {
-    background-color: var(--azulOscuro);
-    color: var(--varianteGrisClaro);
-    padding-right: 0px;
-}
-
-footer ul li {
-    list-style: none;
-}
-
-footer ul li a {
-    color: var(--varianteGrisClaro);
-    font-weight: 500;
-    text-decoration: none;
-
 }
 
 .orange {
@@ -198,6 +162,28 @@ footer ul li a {
     width: 8.37rem;
 }
 
+/* SECTION HOME */
+
+article img {
+    height: 50vh;
+}
+
+section article:last-child {
+    justify-content: center;
+    margin: 0rem 2rem 0rem 1.5rem;
+}
+
+.home p {
+    font-weight: 500;
+    font-size: 1.03rem;
+    line-height: 157.1%;
+    margin: 1.75rem 0px;
+    width: 23.12rem;
+    color: var(--azulGrisáceoOscuro);
+}
+
+/* SECTION DIV ORANGE */
+
 .lastFooter {
     background-color: var(--rojoBrillante);
     align-items: center;
@@ -217,19 +203,7 @@ footer ul li a {
     height: 2.68rem;
     width: 7.5rem;
 }
-
-input {
-    border: none;
-    border-radius: 1.875rem;
-    height: 2.68rem;
-    width: 20rem;
-}
-
-input:last-child {
-    width: 5rem;
-}
-
-/* CARRUSEL - SLIDER */
+/* TESTIMONIOALS CARRUSEL - SLIDER */
 
 .testimonials {
     display: block;   
@@ -300,15 +274,48 @@ ul.menuSlider li a {
     width: 1rem;
 }
 
-/* QUERIA MARCAR DIFERENTE EL CIRCULO ACTIVO
-.menuSlider li:target{
-    color: var(--rojoBrillante);
-    text-rendering: \25CF;
-}*/
+/* FOOTER */
+
+footer {
+    background-color: var(--azulOscuro);
+    color: var(--varianteGrisClaro);
+    padding-right: 0px;
+}
+
+/* FORM */
+.sectionSuscribe{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+}
+
+input {
+    border: none;
+    border-radius: 1.875rem;
+    height: 2.68rem;
+    width: 20rem;
+}
+
+input:last-child {
+    width: 5rem;
+}
+
+/* MENU */
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li a {
+    color: var(--varianteGrisClaro);
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 2rem;
+}
 
 /* STYLES FOR DESKTOP */
 
-@media screen and (min-width: 1439px) {
+@media screen and (min-width: 1440px) {
 
     .nav-toggle-label {
         display: none;
@@ -499,7 +506,14 @@ ul.menuSlider li a {
         margin: 0rem 0.2rem;
     }
 
-    footer form{
+    .sectionSuscribe{
         order: 9;
+        justify-content: space-between;
     }
+
+    .copyright{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
 }
