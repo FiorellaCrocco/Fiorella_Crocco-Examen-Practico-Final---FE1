@@ -18,6 +18,8 @@
     font-family: 'Be Vietnam Pro', sans-serif;
     margin: 0px;
     padding: 0px;
+    width: 23,4375;
+    /*border: solid blue 1px;*/
 }
 
 body {
@@ -40,15 +42,17 @@ p{
 /* HEADER */
 
 header {
-    height: 4vh;
+    height: 2.8vh;
     position: sticky;
     top: 0px;
     width: 100vw;
     z-index: 777;
+    margin: 1.5rem 0.5rem 1.5rem -0.9rem;
+
 }
 
 .logo{
-    margin-left: 1.7rem;
+    margin-left: 1.5rem;
 }
 
 nav {
@@ -99,7 +103,7 @@ header button{
     background-image: url("../img/icon-hamburger.svg");
     display: flex;
     height: 100%;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     position: absolute;
     right: 0;
     top: 0;
@@ -138,7 +142,7 @@ header button{
 h1 {
     color: var(--azulOscuro);
     font-weight: 700;
-    font-size: 3.5rem;
+    font-size: 2rem;
     letter-spacing: -0.035rem;
     margin: 0px;
 }
@@ -151,6 +155,22 @@ h1 {
     color: var(--varianteGrisClaro);
     height: 2.75rem;
     width: 8.37rem;
+}
+.aboutOrder{
+    text-align: center;
+    
+}
+
+.aboutOrder span{
+    background-color: var(--rojoBrillante);
+    border: none;
+    border-radius: 1.875rem;
+    color: var(--varianteGrisClaro);
+    height: 2.5rem;
+    width: 4.3rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .orangemini {
@@ -165,20 +185,29 @@ h1 {
 /* SECTION HOME */
 
 article img {
-    height: 50vh;
+    width: 95vw;
 }
 
 section article:last-child {
     justify-content: center;
     margin: 0rem 2rem 0rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home {
+    align-items: center;
+    justify-content: center;
 }
 
 .home p {
     font-weight: 500;
     font-size: 1.03rem;
-    line-height: 157.1%;
-    margin: 1.75rem 0px;
-    width: 23.12rem;
+    line-height: 155%;
+    margin: 1.5rem 0px;
+    width: 20rem;
     color: var(--azulGrisáceoOscuro);
 }
 
@@ -209,6 +238,7 @@ section article:last-child {
     display: block;   
     text-align: center;
     justify-items: center;
+    border: solid 1px saddlebrown;
 }
 
 .testimonials h2{
@@ -228,6 +258,7 @@ section article:last-child {
     list-style: none;
     position: relative;
     margin: 5rem 0rem 0rem 0.3rem;
+    border: solid 1px rgb(46, 222, 111);
 }
 
 .slider li {
@@ -244,7 +275,7 @@ section article:last-child {
 
 .slider li img{
     position: relative;
-    top: -2rem;
+    top: -3rem;
     height: 15vh;
 }
 
@@ -315,8 +346,11 @@ footer ul li a {
 
 /* STYLES FOR DESKTOP */
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1000px) {
 
+    *{
+        border: rgb(143, 148, 167) 1px solid;
+    }
     .nav-toggle-label {
         display: none;
     }
@@ -327,6 +361,7 @@ footer ul li a {
         background-repeat: no-repeat;
         margin: 0px;
         padding: 0px;
+        width: 100vw;
     }
 
     main {
@@ -340,11 +375,19 @@ footer ul li a {
         display: flex;
         justify-content: space-between;
         margin-bottom: 4.69rem;
-        padding: 4.5rem 9rem 0rem 9rem;
+        padding: 4.5rem 9rem 0rem 8.2rem;
     }
 
     header button{
         visibility: visible;
+        background-color: var(--rojoBrillante);
+        border: none;
+        border-radius: 3rem;
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+        color: var(--varianteGrisClaro);
+        height: 2.75rem;
+        width: 8.37rem;
+        margin: 0.7rem -1rem 0rem 0rem;
     } 
 
     .logo {
@@ -361,6 +404,7 @@ footer ul li a {
         position: relative;
         top: initial;
         transform: scale(1, 1);
+        width: 90vw;
     }
 
     nav ul {
@@ -377,9 +421,23 @@ footer ul li a {
     }
 
     .home {
+        align-items: center;
         display: flex;
         justify-content: space-between;
         margin: 4.5rem 9rem 0rem 9rem;
+    }
+
+    article img {
+        width: 30vw;
+    }
+
+    section article:last-child {
+        
+        border: solid red 1px;
+        text-align: left;
+        justify-content: left;
+        align-items: flex-start;
+        margin: 0rem 2rem 0rem 0rem
     }
 
     .image {
@@ -399,13 +457,13 @@ footer ul li a {
         height: 50vh;
         text-align: center;
         justify-items: center;
+        width: 100%;
     }
     
     .slider {
         display: flex;
         margin-left: 2.5rem;
-       
-        width: 90vw;
+       position: relative;
     }
 
     .slider li {
@@ -414,12 +472,7 @@ footer ul li a {
         opacity: 1;
         position: relative;
         width: 40vw;
-        
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        
+        justify-content: space-around;
     }
 
     .menuSlider {
@@ -429,7 +482,7 @@ footer ul li a {
     .about {
         display: flex;
         justify-content: space-between;
-        margin: 4.69rem 10.31rem;
+        margin: 4.69rem 9rem;
         padding: 5rem 0rem;
     }
 
@@ -455,7 +508,7 @@ footer ul li a {
     }
 
     .aboutOrder {
-        align-items: baseline;
+        align-items: center;
         display: flex;
         gap: 1.5rem;
         padding-right: 5rem;
@@ -466,7 +519,7 @@ footer ul li a {
         font-weight: 500;
         font-size: 1.03rem;
         line-height: 157.1%;
-        padding: 0px 0px 1rem 10rem;
+        padding: 0px 0px 1rem 5.8rem;
     }
     
     .lastFooter {
