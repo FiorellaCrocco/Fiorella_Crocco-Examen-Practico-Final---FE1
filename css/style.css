@@ -249,14 +249,16 @@ section article:last-child {
 .lastFooter {
     background-color: var(--rojoBrillante);
     align-items: center;
-    display: flex;
+    text-align: center;
     margin: -1rem;
-    padding: 0.5rem 1.5rem 1.5rem;
+    padding: 5rem 1.5rem 5rem;
+    font-size: 1.4rem;
 }
 
 .lastFooter h2{
     color: var(--varianteGrisClaro);
-    font-weight: 700;
+    font-weight: 500;
+    padding: 0rem 2rem;
 }
 
 .orangeminiWhile {
@@ -266,6 +268,7 @@ section article:last-child {
     color: var(--rojoBrillante);
     height: 2.68rem;
     width: 7.5rem;
+    margin-top: 3rem;
 }
 /* TESTIMONIALS CARRUSEL - SLIDER */
 
@@ -341,7 +344,7 @@ ul.menuSlider li a {
 /* FOOTER */
 
 footer {
-    background-color: var(--azulOscuro);
+    background-color: var(--azulMuyOscuro);
     color: var(--varianteGrisClaro);
     padding: 1.5rem;
     margin: -1rem;
@@ -386,13 +389,19 @@ footer ul li a {
 }
 
 .copyright{
+    visibility: hidden;
+}
+
+.copyrightMobile{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .imgFooter{
     padding: 1rem;
 }
+
+
 
 /* STYLES FOR DESKTOP */
 
@@ -610,8 +619,13 @@ footer ul li a {
     }
 
     .copyright{
+        visibility: visible;
         display: flex;
         justify-content: flex-end;
+    }
+
+    .copyrightMobile{
+        display: none;
     }
     
     .lista {
