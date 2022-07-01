@@ -149,6 +149,9 @@ h1 {
 .lista {
     column-count: 2;
     gap: 3rem;
+    margin-left: 1.5rem;
+    text-align: justify;
+    padding: 1rem 0rem;
 }
 
 .orange {
@@ -318,7 +321,7 @@ section article:last-child {
 }
 
 .menuSlider {
-    margin: 16.3rem 7rem 0rem 4.5rem;
+    margin: 19rem 7rem 0rem 7rem;
     justify-content: center;
 }
 
@@ -342,6 +345,7 @@ footer {
     color: var(--varianteGrisClaro);
     padding: 1.5rem;
     margin: -1rem;
+    text-align: center;
 }
 
 /* FORM */
@@ -370,9 +374,15 @@ footer ul li {
 
 footer ul li a {
     color: var(--varianteGrisClaro);
-    font-weight: 500;
+    font-weight: 100;
     text-decoration: none;
     line-height: 2rem;
+}
+
+.footerLogos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .copyright{
@@ -380,6 +390,9 @@ footer ul li a {
     justify-content: flex-end;
 }
 
+.imgFooter{
+    padding: 1rem;
+}
 
 /* STYLES FOR DESKTOP */
 
@@ -390,6 +403,9 @@ footer ul li a {
     }*/
     .nav-toggle-label {
         display: none;
+    }
+    .imgFooter{
+        padding: 0rem;
     }
 
     body {
@@ -573,12 +589,10 @@ footer ul li a {
         height: 15.43rem;
         justify-content: space-between;
         padding: 4.5rem 9rem 3rem 9rem;
+        text-align: left;
     }
 
     .footerLogos{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         order: -1;
     }
 
@@ -602,6 +616,7 @@ footer ul li a {
     
     .lista {
         gap: 10rem;
+        padding: 0rem;
     }
 
     input {
