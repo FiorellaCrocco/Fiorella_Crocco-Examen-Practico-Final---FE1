@@ -154,11 +154,14 @@ h1 {
     padding: 1rem 0rem;
 }
 
+.lista li a:hover{
+    color: var(--rojoBrillante);
+}
+
 .orange {
     background-color: var(--rojoBrillante);
     border: none;
     border-radius: 3rem;
-    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
     color: var(--varianteGrisClaro);
     height: 2.75rem;
     width: 8.37rem;
@@ -401,7 +404,16 @@ footer ul li a {
     padding: 1rem;
 }
 
+button:hover, .orangemini:hover{
+    background-color: rgb(242, 95, 58,0.65);
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
 
+.orangeminiWhile:hover{
+    background-color: var(--varianteGrisClaro);
+    color:  rgb(242, 95, 58,0.65);
+}
 
 /* STYLES FOR DESKTOP */
 
@@ -415,6 +427,7 @@ footer ul li a {
     }
     .imgFooter{
         padding: 0rem;
+        padding-top: 0.2rem;
     }
 
     body {
@@ -445,7 +458,7 @@ footer ul li a {
         background-color: var(--rojoBrillante);
         border: none;
         border-radius: 3rem;
-        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+        /*box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);*/
         color: var(--varianteGrisClaro);
         height: 2.75rem;
         width: 8.37rem;
@@ -590,7 +603,10 @@ footer ul li a {
     .lastFooter h2{
         font-size: 2rem;
         width: 30rem;
-
+    }
+    
+    .orangeminiWhile {
+        margin-top: 0rem;
     }
 
     footer {
