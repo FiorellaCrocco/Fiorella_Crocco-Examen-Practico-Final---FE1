@@ -19,7 +19,6 @@
     margin: 0px;
     padding: 0px;
     width: 23,4375;
-    /*border: solid blue 1px;*/
 }
 
 body {
@@ -100,7 +99,7 @@ header button{
 
 .nav-toggle-label {
     align-items: center;
-    background-image: url("../img/icon-hamburger.svg");
+   /* background-image: url("../img/icon-hamburger.svg");*/
     display: flex;
     height: 100%;
     margin-right: 1rem;
@@ -147,7 +146,10 @@ h1 {
     margin: 0px;
 }
 
-
+.lista {
+    column-count: 2;
+    gap: 3rem;
+}
 
 .orange {
     background-color: var(--rojoBrillante);
@@ -245,6 +247,8 @@ section article:last-child {
     background-color: var(--rojoBrillante);
     align-items: center;
     display: flex;
+    margin: -1rem;
+    padding: 0.5rem 1.5rem 1.5rem;
 }
 
 .lastFooter h2{
@@ -260,13 +264,12 @@ section article:last-child {
     height: 2.68rem;
     width: 7.5rem;
 }
-/* TESTIMONIOALS CARRUSEL - SLIDER */
+/* TESTIMONIALS CARRUSEL - SLIDER */
 
 .testimonials {
     display: block;   
     text-align: center;
     justify-items: center;
-    border: solid 1px saddlebrown;
 }
 
 .testimonials h2{
@@ -279,14 +282,13 @@ section article:last-child {
 .testimonialsButton{
     display: flex;
     justify-content: center;
-    padding: 1rem 0rem;
+    padding: 1.5rem 0rem;
 }
 
 .slider {
     list-style: none;
     position: relative;
-    margin: 5rem 0rem 0rem 0.3rem;
-    border: solid 1px rgb(46, 222, 111);
+    margin: 5rem 0rem 0rem 0rem;
 }
 
 .slider li {
@@ -338,21 +340,22 @@ ul.menuSlider li a {
 footer {
     background-color: var(--azulOscuro);
     color: var(--varianteGrisClaro);
-    padding-right: 0px;
+    padding: 1.5rem;
+    margin: -1rem;
 }
 
 /* FORM */
 .sectionSuscribe{
     display: flex;
     flex-direction: column;
-    /*justify-content: space-between;*/
+    margin-top: 0.5rem;
 }
 
 input {
     border: none;
     border-radius: 1.875rem;
     height: 2.68rem;
-    width: 20rem;
+    width: 15rem;
 }
 
 input:last-child {
@@ -372,13 +375,19 @@ footer ul li a {
     line-height: 2rem;
 }
 
+.copyright{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
 /* STYLES FOR DESKTOP */
 
 @media screen and (min-width: 1000px) {
 
-    *{
+   /* *{
         border: rgb(143, 148, 167) 1px solid;
-    }
+    }*/
     .nav-toggle-label {
         display: none;
     }
@@ -464,8 +473,6 @@ footer ul li a {
     }
 
     section article:last-child {
-        
-        border: solid red 1px;
         text-align: left;
         justify-content: left;
         align-items: flex-start;
@@ -494,7 +501,6 @@ footer ul li a {
     
     .slider {
         display: flex;
-        margin-left: 2.5rem;
         position: relative;
     }
 
@@ -594,4 +600,11 @@ footer ul li a {
         justify-content: flex-end;
     }
     
+    .lista {
+        gap: 10rem;
+    }
+
+    input {
+        width: 20rem;
+    }
 }
