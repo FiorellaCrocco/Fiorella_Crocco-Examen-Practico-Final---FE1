@@ -10,7 +10,6 @@
     --varianteGrisClaro: rgb(249, 249, 249);
 }
 
-
 *,
 *::before,
 *::after {
@@ -24,14 +23,12 @@
 body {
     background-image: url("../img/bg-tablet-pattern.svg");
     background-repeat: repeat-y;
-    /*background-position: top left;*/
     background-position: 15rem -10rem;
     margin: 0rem 1rem;
     z-index: 999;
 }
 
-h2,
-h3 {
+h2, h3 {
     color: var(--azulOscuro);
 }
 
@@ -63,13 +60,13 @@ nav {
     transform: scale(1, 0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
-    width: 95vw;
+    width: 100vw;
 }
 
 nav ul {
     list-style: none;
     margin: 0;
-    padding-top: 0.8rem;
+    padding-top: 1.5rem;
 }
 
 nav li {
@@ -424,13 +421,14 @@ button:hover,
     color: rgb(242, 95, 58, 0.65);
 }
 
+.socialMedia .imgFooter:hover{
+    transform:  scale(2) rotate(10deg);
+}
+
 /* STYLES FOR DESKTOP */
 
 @media screen and (min-width: 1000px) {
 
-    /* *{
-        border: rgb(143, 148, 167) 1px solid;
-    }*/
     .nav-toggle-label {
         display: none;
     }
@@ -441,7 +439,7 @@ button:hover,
     }
 
     body {
-        background-image: url("/img/bg-tablet-pattern.svg");
+        background-image: url("../img/bg-tablet-pattern.svg");
         background-position: 62.5rem -12.5rem;
         background-repeat: no-repeat;
         margin: 0px;
@@ -450,7 +448,7 @@ button:hover,
     }
 
     main {
-        background-image: url("/img/bg-tablet-pattern.svg");
+        background-image: url("../img/bg-tablet-pattern.svg");
         background-position: -31.25rem 62.5rem;
         background-repeat: no-repeat;
     }
@@ -468,7 +466,6 @@ button:hover,
         background-color: var(--rojoBrillante);
         border: none;
         border-radius: 3rem;
-        /*box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);*/
         color: var(--varianteGrisClaro);
         height: 2.75rem;
         width: 8.37rem;
